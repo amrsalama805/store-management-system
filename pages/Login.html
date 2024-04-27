@@ -1,0 +1,129 @@
+<!DOC type html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+            integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <style>
+            body {
+                /* background: linear-gradient(#7a75f4,#a43ae5); */
+                background: linear-gradient(to right, #164863, #427D9D, #9BBEC8, #DDF2FD);
+            }
+
+            form {
+                width: 30%;
+                margin: auto;
+                /* background-color: rgb(29, 28, 28);
+            border:1px solid rgb(29, 28, 28); */
+                background-color: white;
+                border: 1px solid white;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+                height: 350px;
+                margin-top: 130px;
+                border-radius: 10px;
+            }
+
+            button {
+                border: none;
+                cursor: pointer;
+            }
+
+            #loginBtn {
+                width: 300px;
+                height: 40px;
+                border-radius: 10px;
+            }
+
+            #passwordBtn {
+                /* background-color: rgb(29, 28, 28); */
+                background-color: white;
+                cursor: pointer;
+                margin-top: 10px;
+            }
+
+            #eye-slash1 {
+                display: none;
+            }
+
+            i {
+                color: black;
+            }
+
+            span {
+                color: red;
+                display: none;
+            }
+
+            input {
+                border: none;
+                height: 30px;
+                /* background-color: rgb(29, 28, 28);
+            border-bottom: 1px solid rgb(102, 101, 101); */
+                background-color: white;
+                border-bottom: 1px solid black;
+            }
+
+            #password {
+                width: 65%;
+            }
+
+            #email {
+                width: 70%;
+            }
+
+            span {
+                display: none;
+                align-self: flex-start;
+                margin-left: 60px;
+            }
+
+            .passwordContainer {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }
+
+            a {
+                text-align: center;
+            }
+
+            #loginBtn {
+                color: white;
+                border: none;
+                /* background: linear-gradient(#7a75f4,#a43ae5); */
+                /* background: linear-gradient(#092635,#1B4242,#5C8374,#9EC8B9); */
+                background: linear-gradient(to left, #164863, #427D9D, #9BBEC8, #DDF2FD);
+            }
+        </style>
+    </head>
+
+    <body>
+        <form onsubmit="Login(event)">
+            <h1>Login Form</h1>
+            <input type="text" name="email" id="email" placeholder="Enter Email Address"
+                onchange="WhenFocusOnInput(this)">
+            <span id="emailMsg">email is required</span>
+            <div class="passwordContainer">
+                <input type="password" name="password" id="password" placeholder="Enter Password"
+                    onchange="WhenFocusOnInput(this)">
+                <div id="passwordBtn">
+                    <i id="eye1" class="fa fa-eye" aria-hidden="true"></i>
+                    <i id="eye-slash1" class="fa fa-eye-slash" aria-hidden="true"></i>
+                </div>
+            </div>
+            <span id="passwordMsg">password is required</span>
+            <button type="submit" id="loginBtn">Log in</button>
+            <a href="./Register.html">don't have account?</a>
+        </form>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="../scripts/Login.js"></script>
+    </body>
+
+    </html>

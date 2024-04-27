@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+        integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            /* background-color: black; */
+            /* background: linear-gradient(#7a75f4,#a43ae5); */
+            background: linear-gradient(to right, #164863, #427D9D, #9BBEC8, #DDF2FD);
+        }
+
+        form {
+            /* background: rgb(29, 28, 28); */
+            background: white;
+            /* border:1px solid rgb(29, 28, 28); */
+            border: 1px solid white;
+            border-radius: 20px;
+            width: 50%;
+            height: auto;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex-wrap: wrap;
+            align-items: center;
+            margin-top: 6%;
+        }
+
+        div {
+            display: none;
+            color: rgb(226, 40, 40);
+        }
+
+        #firstNameMsg,
+        #firstNameMsg2,
+        #lastNameMsg,
+        #lastNameMsg2 {
+            margin-left: 15px;
+        }
+
+        #emailMsg,
+        #emailMsg2 {
+            margin-right: 200px;
+        }
+
+        #passwordMsg,
+        #passwordMsg2 {
+            margin-right: 180px;
+        }
+
+        #confirmPasswordMsg2 {
+            margin-right: 130px;
+        }
+
+        #confirmPasswordMsg {
+            margin-right: 30px;
+        }
+
+        input {
+            border: none;
+            color: black;
+            /* background-color: rgb(29, 28, 28);*/
+            background-color: white;
+            border-bottom: 1px solid rgb(102, 101, 101);
+            width: 50%;
+            height: 30px;
+            margin: 15px;
+        }
+
+        .Container-fullName,
+        .contain-firstName,
+        .contain-lastName {
+            width: 55%;
+            display: block;
+            margin: 0;
+        }
+
+        .Container-fullName,
+        .passwordContainer {
+            display: flex;
+            justify-content: center;
+            align-items: baseline;
+        }
+
+        .passwordContainer {
+            width: 95%;
+        }
+
+        #firstName,
+        #lastName {
+            width: 80%;
+        }
+
+        button {
+            border: none;
+            /* background-color: rgb(29, 28, 28); */
+            background-color: white;
+            color: black;
+            cursor: pointer;
+        }
+
+        #submit {
+            width: 330px;
+            height: 40px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 8px;
+            /* background-color: green; */
+            /* background: linear-gradient(#7a75f4,#a43ae5); */
+            background: linear-gradient(to left, #164863, #427D9D, #9BBEC8, #DDF2FD);
+        }
+
+        #eye-slash2,
+        #eye-slash1 {
+            display: none;
+        }
+
+        a {
+            margin-top: 10px;
+            color: black;
+        }
+
+        #submit {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <form onsubmit="Register(event)">
+        <h1>SignUp Form</h1>
+        <div class="Container-fullName">
+            <div class="contain-firstName">
+                <input type="text" name="firstName" id="firstName" placeholder="Enter First Name"
+                    onchange="CheckValidation(this)">
+                <div id="firstNameMsg">name not valid</div>
+                <div id="firstNameMsg2">name is required</div>
+            </div>
+            <div class="contain-lastName">
+                <input type="text" name="lastName" id="lastName" placeholder="Enter Last Name"
+                    onchange="CheckValidation(this)">
+                <div id="lastNameMsg">name not valid</div>
+                <div id="lastNameMsg2">name is required</div>
+            </div>
+        </div>
+        <input type="email" name="email" id="email" placeholder="Enter Email Address" onchange="CheckValidation(this)">
+        <div id="emailMsg">email not valid</div>
+        <div id="emailMsg2">email is required</div>
+        <div class="passwordContainer">
+            <input type="password" name="password" id="password" placeholder="Enter Password"
+                onchange="CheckValidation(this)">
+            <a id="passwordBtn">
+                <i id="eye1" class="fa fa-eye" aria-hidden="true"></i>
+                <i id="eye-slash1" class="fa fa-eye-slash" aria-hidden="true"></i>
+            </a>
+        </div>
+        <div id="passwordMsg">choose strong password</div>
+        <div id="passwordMsg2">password is required</div>
+        <div class="passwordContainer">
+            <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Enter Confirm Password"
+                onchange="CheckValidation(this)">
+            <a id="confirmPasswordBtn">
+                <i id="eye2" class="fa fa-eye" aria-hidden="true"></i>
+                <i id="eye-slash2" class="fa fa-eye-slash" aria-hidden="true"></i>
+            </a>
+        </div>
+        <div id="confirmPasswordMsg">password and confirm password not matched</div>
+        <div id="confirmPasswordMsg2">confirm password is required</div>
+        <button id="submit" type="submit">Register</button>
+        <a href="./Login.html">do you have account?</a>
+    </form>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../scripts/Register.js"></script>
+</body>
+
+</html>

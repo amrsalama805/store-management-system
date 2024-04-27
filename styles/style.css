@@ -1,0 +1,241 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+
+body {
+    background-color: #222;
+    color: #fff;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.container {
+    width: 80%;
+    margin: 25px auto 0;
+    /* background-color: orange; */
+}
+
+.contain-header{
+    display: flex;
+    justify-content: space-between;
+}
+.head {
+    /* background-color: blueviolet; */
+    text-align: center;
+    overflow-x: hidden;
+    margin-bottom: 30px;
+}
+
+.head h1 {
+    font-size: 40px;
+    margin-bottom: 8px;
+}
+
+.product-category-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-inputs, .category-inputs{
+    border-radius: 5px;
+}
+
+.product-inputs {
+    background-color: #444;
+    width: 50vw;
+    padding: 10px;
+}
+
+
+.category-inputs {
+    background-color: #555;
+    width: 28vw;
+    padding: 10px;
+}
+
+.product-inputs button{
+    display: block;
+    width: 100%;
+}
+
+#category{
+    width: 50%;
+}
+
+
+.category-update-delete {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin-top: 10px;
+}
+
+#submitCategory{
+    width: 100%;
+}
+
+#submitProduct{
+    margin-top: 5px;
+}
+
+.category-buttons{
+    display: flex;
+    justify-content: space-between;
+}
+
+.category-buttons button{
+    width: 49%;
+}
+
+
+.search{
+    display: flex;
+    margin-top: 8px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search input{
+    width: 70%;
+}
+
+.btnSearch{
+    display: flex;
+    justify-content: space-between;
+    width: 28%;
+}
+
+.btnSearch button{
+    width: 49%;
+    height: 40px;
+}
+
+input {
+    width: 100%;
+    height: 30px;
+    outline: none;
+    border: none;
+    background-color: #111;
+    color: #fff;
+    margin: 6px 0;
+    border-radius: 4px;
+    padding: 18px 0 18px 5px;
+}
+
+input:focus {
+    background-color: #fff;
+    color: #000;
+}
+
+.money {
+    display: flex;
+    justify-content: space-between;
+}
+
+.money input{
+    width: 49.5%;
+}
+
+#total {
+    background-color: rgba(255, 17, 17, 0.655);
+    padding: 2px 5px;
+    border-radius: 4px;
+}
+
+#total::before {
+    content: 'Total: ';
+}
+
+select {
+    height: 35px;
+    margin: 4px 0 6px;
+    color: #fff;
+    background-color: #111;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+}
+
+
+button {
+    height: 30px;
+    margin: 1px 0;
+    border: none;
+    cursor: pointer;
+    background-color: rgba(23, 0, 128, 0.776);
+    color: #fff;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+
+button:hover {
+    background-color: rgba(112, 17, 123, 0.776);
+    letter-spacing: 1px;
+}
+
+
+table {
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+}
+
+table th {
+    text-transform: uppercase;
+}
+
+th,
+td {
+    padding: 5px;
+}
+
+#logOut {
+    width: 9%;
+    height: 40px;
+    border-radius: 8px;
+    background-color: rgba(255, 30, 0, 0.247);
+    float: right;
+}
+
+#logOut:hover {
+    background-color: rgba(255, 21, 0, 0.852);
+}
+
+.typing {
+    position: relative;
+    color: #fc6d6d;
+    padding-right: 12px;
+    font-weight: bold;
+}
+
+.typing::before {
+    content: '';
+    height: 100%;
+    width: 100%;
+    border-left: 2px solid #fc6d6d;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: typing 13s steps(75) infinite;
+    background-color: #222;
+}
+
+@keyframes typing {
+    0% {
+        left: 0;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+.typing {
+    color: #fc6d6d;
+}
+
+i{
+    cursor: pointer;
+}

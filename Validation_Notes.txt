@@ -1,0 +1,58 @@
+-----------------------------------------
+-------------- Validations --------------
+-----------------------------------------
+
+-----------------
+[1] --- Title ---
+-----------------
+1 - not empty.
+2 - no chars more than 20.
+
+
+--------------------
+[2] --- Category ---
+--------------------
+1 - no chars more than 20.
+2 - don't add any Category that is already existed.
+
+
+-----------------
+[3] --- Price ---
+-----------------
+1 - not empty.
+2 - not allow any char except [0 - 9] and decimal dot.
+3 - not allow 0
+4 - not allow 0000000000
+5 - not allow ........
+6 - not allow any digit starts with 0
+7 - not allow spaces.
+
+
+-----------------
+[4] --- Taxes ---
+-----------------
+1 - not empty.
+2 - not allow any char except [0 - 9] and decimal dot.
+3 - not allow 0000000000
+4 - not allow ........
+5 - not allow any digit starts with 0
+6 - not allow spaces.
+
+
+--------------------
+[4] --- Quantity ---
+--------------------
+1 - not empty.
+2 - not allow any char except [0 - 9].
+3 - not allow 0
+4 - not allow 0000000000
+6 - not allow any digit starts with 0
+7 - not allow spaces.
+8 - not allow decimal dot.
+
+
+---------------------------------
+[5] --- Create Product Button ---
+---------------------------------
+1 - don't create any product untill filling all empty boxes.
+2 - don't add any product that is already existed.
